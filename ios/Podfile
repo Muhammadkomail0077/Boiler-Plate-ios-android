@@ -42,7 +42,7 @@ target 'ProjectIos' do
     inherit! :complete
     # Pods for testing
   end
-  use_flipper!()
+  # use_flipper!()
 
 
   post_install do |installer|

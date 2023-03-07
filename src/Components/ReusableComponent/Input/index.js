@@ -24,14 +24,12 @@ export default function Input(props) {
         maxLength={props.length}
         right={
           props.rightIcon ? (
-            // <Pressable onPress={()=> console.log('IconPressed')}>
             <TextInput.Icon
               onPress={props.iconFunction}
-              name={props.IconName}
+              icon={props.IconName}
               color={props.IconColor}
             />
           ) : (
-            // </Pressable>
             emptyIcon
           )
         }
@@ -43,19 +41,14 @@ export default function Input(props) {
         activeOutlineColor={
           props.activeOutlineColor ? props.activeOutlineColor : COLORS.primary
         }
-        // selectionColor={COLORS.white}
-        // placeholder={props.placeholder}
         multiline={props.multiline}
         numberOfLines={props.line}
-        // value={props.role==1?props.testtext:text}
-        // onChangeText={text => setText(text)}
         theme={
           reducerData?.isDark?.isdark
             ? {
                 colors: {
                   placeholder: COLORS.bgcolor,
                   text: COLORS.white,
-                  // accent:COLORS.white
                 },
               }
             : {
@@ -72,9 +65,6 @@ export default function Input(props) {
           backgroundColor: reducerData?.isDark?.isdark
             ? COLORS.darkMode
             : COLORS.bgcolor,
-
-          // color:COLORS.bgcolor
-          // color:COLORS.white
         }}
       />
     </>

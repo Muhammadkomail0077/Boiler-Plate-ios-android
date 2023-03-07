@@ -10,6 +10,7 @@ import CurveBottomBar from '../CurveBottomScreen';
 // import MessageList from '../../Components/MessageList';
 // import Messages from '../../Screens/Messages';
 import { Messages } from '../../Screens/Messages';
+import { Login } from '../../Screens/Login';
 
 export default function StackNavigator() {
   const Stack = createStackNavigator();
@@ -20,6 +21,7 @@ export default function StackNavigator() {
         screenOptions={{
           headerShown: false,
         }}>
+        <Stack.Screen name="login" component={Login} />
         <Stack.Screen name="CurveBottomBar" component={CurveBottomBar} />
         {/* <Stack.Screen name="message" component={Messages} /> */}
         <Stack.Screen name="SimpleBottomTab" component={SimpleBottomTab} />
